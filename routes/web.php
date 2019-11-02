@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index')->name('homepage');
+Route::get('/recruiter', 'PagesController@employer');
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::resource('abouts', 'AboutsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

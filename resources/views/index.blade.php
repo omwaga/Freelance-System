@@ -17,7 +17,7 @@
                                                     <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="3s" data-wow-delay="0s">{{$details->banner1}}</h1>
                                                     <p class="sub-title wow bounceInRight hidden-xs" data-wow-duration="3s" data-wow-delay="1s"> {{$details->bannerdetails1}}</p>
                                                     <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="3s" data-wow-delay="2s">
-                                                        <a class="button slider-btn" href="#">Find a job</a>                    
+                                                        <a class="button slider-btn" data-toggle="modal" data-target="#register">Register</a>                    
                                                     </div>
                                                 </div>
                                             </div>
@@ -458,4 +458,44 @@
                     </div>
                 </div>
                 <!--End of Social Link Area--> 
+
+                <!--Start of Register Form-->
+        <div id="quickview-register">
+            <!-- Modal -->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog">
+                <div class="modal-dialog register" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-pop-up-content ptb-60 pl-60 pr-60">
+                                <div class="area-title text-center mb-43">
+                                    <h2 class="pt-7 pb-7 pl-40 pr-40">Sign Up</h2>
+                                </div>
+                                <form method="post" action="#">
+                                    <div class="form-box">
+                                        <input type="text" name="fullname" placeholder="Full Name" class="mb-14">
+                                        <input type="text" name="username" placeholder="User Name" class="mb-14">
+                                        <input type="email" name="email" placeholder="Email" class="mb-14">
+                                        <input type="password" name="pass" placeholder="Password" class="mb-14">
+                                        <input type="password" name="re_pass" placeholder="Confirm Password">
+                                    </div>
+                                    <div class="fix ptb-30">
+                                        <span class="remember">
+                                            <input class="p-0 pull-left" type="checkbox">
+                                            <span class="fix block">There are many variations of passages of Lorem Ipsum available</span> 
+                                        </span>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="text-uppercase">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>  
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!--End of Register Form-->     
 @endsection

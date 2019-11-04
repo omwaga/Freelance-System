@@ -13,6 +13,10 @@
 
 Route::get('/', 'PagesController@index')->name('homepage');
 Route::get('/recruiter', 'PagesController@employer');
+
+Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
+Route::post('/registeremployer', 'RegisterEmployersController@registeremployer')->name('regemployer');
+
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::resource('abouts', 'AboutsController');
 

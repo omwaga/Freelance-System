@@ -10,7 +10,7 @@
         boxCols: 10,
         boxRows: 10,
         animSpeed: 500,
-        pauseTime: 5000,
+        pauseTime: 20000,
         startSlide: 0,
         directionNav: true,
         controlNavThumbs: false,

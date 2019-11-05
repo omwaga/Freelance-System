@@ -175,7 +175,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Saifun <i class="ti-angle-down f-s-10"></i></span>
+                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">{{auth()->user()->name}} <i class="ti-angle-down f-s-10"></i></span>
                     <div class="drop-down dropdown-profile">
                         <div class="dropdown-content-heading">
                             <span class="text-left">Upgrade Now</span>
@@ -191,7 +191,12 @@
                                 <li><a href="#"><i class="ti-settings"></i> <span>Setting</span></a></li>
                                 <li><a href="#"><i class="ti-help-alt"></i> <span>Help</span></a></li>
                                 <li><a href="#"><i class="ti-lock"></i> <span>Lock Screen</span></a></li>
-                                <li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+                                <li><a href="#" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="ti-power-off"></i> <span>Logout</span></a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                     </div>

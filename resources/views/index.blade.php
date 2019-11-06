@@ -17,7 +17,7 @@
                                                     <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="3s" data-wow-delay="0s">{{$details->banner1}}</h1>
                                                     <p class="sub-title wow bounceInRight hidden-xs" data-wow-duration="3s" data-wow-delay="1s"> {{$details->bannerdetails1}}</p>
                                                     <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="3s" data-wow-delay="2s">
-                                                        <a class="button slider-btn" data-toggle="modal" data-target="#register">Register</a>                    
+                                                        <a class="button slider-btn" href="{{route('registeremployer')}}">Register</a>                    
                                                     </div>
                                                 </div>
                                             </div>

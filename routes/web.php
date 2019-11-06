@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PagesController@index')->name('homepage');
-Route::get('/recruiter', 'PagesController@employer');
+Route::get('/recruiter', 'EmployerController@employer');
+Route::get('/user', 'UserController@index');
 
 Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
 Route::post('/registeremployer', 'RegisterEmployersController@registeremployer')->name('regemployer');
@@ -20,6 +21,4 @@ Route::post('/registeremployer', 'RegisterEmployersController@registeremployer')
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::resource('abouts', 'AboutsController');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(['verify' => true]);

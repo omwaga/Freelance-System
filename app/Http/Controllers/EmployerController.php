@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class EmployerController extends Controller
 {
     public function __construct()
     {
         $this->middleware(['auth', 'verified']);
     }
 
-    public function index()
+    public function employer()
     {
-        return view('admin.index');
+        return view('employer.index');
     }
 }

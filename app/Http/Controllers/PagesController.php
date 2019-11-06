@@ -13,9 +13,4 @@ class PagesController extends Controller
     	$details = About::where('id',  1)->first();
         return view('index', compact('details'));
     }
-
-    public function employer()
-    {
-        return view('employer.index');
-    }
 }

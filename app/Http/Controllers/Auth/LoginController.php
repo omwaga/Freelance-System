@@ -34,7 +34,7 @@ class LoginController extends Controller
         { 
          return '/recruiter';    
         }
-        return '/';
+        return '/user';
     }
 
     /**

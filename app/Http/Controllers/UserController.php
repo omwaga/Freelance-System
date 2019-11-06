@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+use App\About;
+
+class UserController extends Controller
 {
     public function __construct()
     {
@@ -13,6 +15,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+    	$details = About::where('id',  1)->first();
+        return view('index', compact('details'));
     }
 }

@@ -37,7 +37,7 @@ class RegisterController extends Controller
         { 
          return '/recruiter';    
         }
-        return '/';
+        return '/user';
     }
 
     /**

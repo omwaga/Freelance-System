@@ -39,11 +39,17 @@
                     <li class="label">Main</li>
                     <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="index.html">Dashboard 1</a></li>
+                            <li><a href="index.html">Dashboard</a></li>
                         </ul>
                     </li>
-                    <li class="label">School</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>Management <span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <li class="label">My projects</li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="school-student.html">New Project</a></li>
+                        </ul>
+                    </li>
+                    <li class="label">Candidates</li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Candidates<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="school-student.html">Student</a></li>
                         </ul>

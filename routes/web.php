@@ -20,5 +20,6 @@ Route::post('/registeremployer', 'RegisterEmployersController@registeremployer')
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::resource('abouts', 'AboutsController');
+Route::resource('categories', 'CategoriesController');
 
 Auth::routes(['verify' => true]);

@@ -292,6 +292,29 @@
 									</li>
 								</ul>
 							</div>
+						</li>
+
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#job">
+								<i class="fas fa-layer-group"></i>
+								<p>Manage Job Categories</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="job">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="#">
+											<span class="sub-item">All Categories</span>
+										</a>
+									</li>
+									<li>
+										<a href="/categories/create">
+											<span class="sub-item">New Category</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#job">
@@ -313,7 +336,6 @@
 									</li>
 								</ul>
 							</div>
-						</li>
 						</li>
 
 						<li class="nav-item">

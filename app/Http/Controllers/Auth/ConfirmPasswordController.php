@@ -25,7 +25,17 @@ class ConfirmPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected function redirectTo()
+    {
+        if (auth()->user()->role == 'admin') {
+            return '/admin';
+        }
+        else if (auth()->user()->role == 'employer')
+        { 
+         return '/recruiter';    
+        }
+        return '/user';
+    }
 
     /**
      * Create a new controller instance.

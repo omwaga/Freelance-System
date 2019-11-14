@@ -45,7 +45,7 @@
                     <li class="label">My projects</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="school-student.html">New Project</a></li>
+                            <li><a href="/projects/create">New Project</a></li>
                         </ul>
                     </li>
                     <li class="label">Candidates</li>

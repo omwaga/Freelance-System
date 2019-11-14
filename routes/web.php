@@ -16,10 +16,10 @@ Route::get('/recruiter', 'EmployerController@employer');
 Route::get('/user', 'UserController@index');
 
 Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
-Route::post('/registeremployer', 'RegisterEmployersController@registeremployer')->name('regemployer');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::resource('abouts', 'AboutsController');
 Route::resource('categories', 'CategoriesController');
+Route::resource('projects', 'ProjectsController');
 
 Auth::routes(['verify' => true]);

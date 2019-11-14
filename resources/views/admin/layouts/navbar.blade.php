@@ -281,7 +281,7 @@
 							<div class="collapse" id="employer">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="#">
+										<a href="{{route('employers')}}">
 											<span class="sub-item">All Employers</span>
 										</a>
 									</li>
@@ -303,7 +303,7 @@
 							<div class="collapse" id="job">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="#">
+										<a href="/categories">
 											<span class="sub-item">All Categories</span>
 										</a>
 									</li>

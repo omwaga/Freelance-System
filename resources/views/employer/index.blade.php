@@ -36,7 +36,7 @@
                                                 <i class="ti-eye"></i>
                                             </div>
                                             <div class="stat-content">
-                                                <div class="stat-text">Order Received</div>
+                                                <div class="stat-text">Invoices Due</div>
                                                 <div class="stat-digit">6,250</div>
                                             </div>
 
@@ -51,7 +51,7 @@
                                                 <i class="ti-bag"></i>
                                             </div>
                                             <div class="stat-content">
-                                                <div class="stat-text">Today Delevered</div>
+                                                <div class="stat-text">Active Projects</div>
                                                 <div class="stat-digit">2,584</div>
                                             </div>
 
@@ -66,7 +66,7 @@
                                                 <i class="ti-user"></i>
                                             </div>
                                             <div class="stat-content">
-                                                <div class="stat-text">New Customer</div>
+                                                <div class="stat-text">Completed</div>
                                                 <div class="stat-digit">9,874</div>
                                             </div>
 
@@ -81,7 +81,7 @@
                                                 <i class="ti-money"></i>
                                             </div>
                                             <div class="stat-content">
-                                                <div class="stat-text">Net Earning</div>
+                                                <div class="stat-text">New Applicants</div>
                                                 <div class="stat-digit">3,5621</div>
                                             </div>
 

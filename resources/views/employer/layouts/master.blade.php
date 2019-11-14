@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adminity : Creative Admin Dashboard</title>
+    <title>KaziPoint : Creative Admin Dashboard</title>
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
@@ -48,10 +48,10 @@
                             <li><a href="/projects/create">New Project</a></li>
                         </ul>
                     </li>
-                    <li class="label">Candidates</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Candidates<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <li class="label">Applicants</li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>New Candidates<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="school-student.html">Student</a></li>
+                            <li><a href="#">Previous Candidates</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,7 +62,7 @@
 
     <div class="header">
         <div class="pull-left">
-            <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Adminity</span></a></div>
+            <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>KaziPoint</span></a></div>
             <div class="hamburger sidebar-toggle">
                 <span class="line"></span>
                 <span class="line"></span>

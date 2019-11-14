@@ -16,6 +16,7 @@ Route::get('/recruiter', 'EmployerController@employer');
 Route::get('/user', 'UserController@index');
 
 Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
+Route::get('/employers', 'AdminController@employers')->name('employers');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::resource('abouts', 'AboutsController');

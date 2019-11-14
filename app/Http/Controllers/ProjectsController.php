@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Category;
+
 class ProjectsController extends Controller
 {
     /**
@@ -22,8 +24,10 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('employer.newproject');
+    { 
+        $categories = Category::all(); 
+
+        return view('employer.newproject', compact('categories'));
     }
 
     /**

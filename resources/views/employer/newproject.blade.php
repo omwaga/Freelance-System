@@ -31,16 +31,17 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-elements">
-                                        <form>
+                                        <form method="POST" action="/projects">
+                                            @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>Title:</label>
-                                                        <input type="text" name="title" class="form-control" placeholder="Project Title" required="">
+                                                        <input type="text" name="title" class="form-control" placeholder="Project Title" required="" value="{{old('title')}}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Description:</label>
-                                                        <textarea name="description" class="form-control" rows="3" placeholder="Project Description" required=""></textarea>
+                                                        <textarea name="description" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -55,10 +56,10 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Project Category:</label>
-                                                        <select name="category" class="form-control">
+                                                        <select name="category_id" class="form-control">
                                                         	<option>All Categories</option>
                                                         	@foreach($categories as $category)
-															<option>{{$category->name}}</option>
+															<option value="{{$category->id}}">{{$category->name}}</option>
 															@endforeach
                                                         	<option>Others</option>
 														</select>

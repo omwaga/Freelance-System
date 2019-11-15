@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Category;
+use App\Project;
 
 class ProjectsController extends Controller
 {
@@ -38,7 +39,16 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'category_id' => 'required',
+            'title' => ['required', 'min:3'],
+            'description' => 'required',
+            'level_required' => 'required',
+        ]);
+
+        Project::create($attributes + ['user_id' => auth()->id()]);
+
+        return back();
     }
 
     /**

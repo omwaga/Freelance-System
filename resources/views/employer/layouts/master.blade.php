@@ -37,14 +37,12 @@
             <div class="nano-content">
                 <ul>
                     <li class="label">Main</li>
-                    <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="index.html">Dashboard</a></li>
-                        </ul>
+                    <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard </a>
                     </li>
                     <li class="label">My projects</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
+                            <li><a href="/projects">My Projects<span class="badge badge-primary">28</span></a></li>
                             <li><a href="/projects/create">New Project</a></li>
                         </ul>
                     </li>
@@ -79,36 +77,6 @@
                         </div>
                         <div class="dropdown-content-body">
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
-                                        <div class="notification-content">
-                                            <small class="notification-timestamp pull-right">02:34 PM</small>
-                                            <div class="notification-heading">Mr. Saifun</div>
-                                            <div class="notification-text">5 members joined today </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
-                                        <div class="notification-content">
-                                            <small class="notification-timestamp pull-right">02:34 PM</small>
-                                            <div class="notification-heading">Mariam</div>
-                                            <div class="notification-text">likes a photo of you</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
-                                        <div class="notification-content">
-                                            <small class="notification-timestamp pull-right">02:34 PM</small>
-                                            <div class="notification-heading">Tasnim</div>
-                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
-                                        </div>
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="#">
                                         <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />

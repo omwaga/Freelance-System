@@ -16,7 +16,9 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project :: where('owner_id', auth()->id())->get();
+
+        return view('employer.projects', compact('projects'));
     }
 
     /**

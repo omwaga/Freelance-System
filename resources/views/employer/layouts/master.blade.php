@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KaziPoint : Creative Admin Dashboard</title>
+
+    <title>Adminity : Exam</title>
+
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
     <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
@@ -17,7 +20,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
     <!-- Standard iPhone Touch Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
     <!-- Styles -->
+    <link href="{{ asset('employer/css/lib/calendar2/pignose.calendar.min.css')}}" rel="stylesheet">
     <link href="{{ asset('employer/css/lib/chartist/chartist.min.css')}}" rel="stylesheet">
     <link href="{{ asset('employer/css/lib/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('employer/css/lib/themify-icons.css')}}" rel="stylesheet">
@@ -212,8 +217,15 @@
     <script src="{{ asset('employer/js/lib/datamap/datamaps.world.min.js')}}"></script>
     <script src="{{ asset('employer/js/lib/datamap/datamap-init.js')}}"></script>
     <!-- // Datamap -->-->
-    <script src="{{ asset('employer/js/lib/weather/jquery.simpleWeather.min.js')}}"></script>
-    <script src="{{ asset('employer/js/lib/weather/weather-init.js')}}"></script>
+    <script src="{{ asset('employer/js/lib/calendar-2/moment.latest.min.js')}}"></script>
+    <!-- scripit init-->
+    <script src="{{ asset('employer/js/lib/calendar-2/semantic.ui.min.js')}}"></script>
+    <!-- scripit init-->
+    <script src="{{ asset('employer/js/lib/calendar-2/prism.min.js')}}"></script>
+    <!-- scripit init-->
+    <script src="{{ asset('employer/js/lib/calendar-2/pignose.calendar.min.js')}}"></script>
+    <!-- scripit init-->
+    <script src="{{ asset('employer/js/lib/calendar-2/pignose.init.js')}}"></script>
     <script src="{{ asset('employer/js/lib/owl-carousel/owl.carousel.min.js')}}"></script>
     <script src="{{ asset('employer/js/lib/owl-carousel/owl.carousel-init.js')}}"></script>
     <script src="{{ asset('employer/js/scripts.js')}}"></script>

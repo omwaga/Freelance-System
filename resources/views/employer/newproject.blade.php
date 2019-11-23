@@ -48,15 +48,15 @@
                                                             <option>Expert</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Get Quotes Untill:</label>
-                                                        <select name="level_required" class="form-control">
-                                                            <option>Not Specified</option>
-                                                            <option>Beginner</option>
-                                                            <option>Intermediate</option>
-                                                            <option>Expert</option>
-                                                        </select>
-                                                    </div>
+                                                    <div class="col-md-6">
+                                        <div class="basic-form">
+                                            <div class="form-group">
+                                                <label>Get quotes until:</label>
+                                                <input type="text" class="form-control calendar bg-ash" placeholder="dd/mm/yyyy" id="text-calendar">
+                                                <span class="ti-calendar form-control-feedback booking-system-feedback m-t-30"></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
@@ -86,75 +86,105 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
-                                                   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active bg-info" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Fixed Price</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link bg-info" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Hourly</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link bg-info" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Not Sure</a>
-  </li>
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-    <div class="row">
-    <div class="col-lg-6">
-      <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Under $250
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Payment Terms</h4>
+                                    <span class="help-block">
+                                                                <small>Select one payment term</small>
+                                                            </span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="custom-tab">
+
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#home">Fixed Price</a></li>
+                                        <li><a data-toggle="tab" href="#menu1">Hourly</a></li>
+                                        <li><a data-toggle="tab" href="#menu2">Not Sure</a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div id="home" class="tab-pane fade in active">
+                                            <div class="form-group">
+                                                        <label>
+                                                    <input type="checkbox"> Under Ksh 10000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Under $250
+                                                    <input type="checkbox"> Ksh 10000 to Ksh 25000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Under $250
-                                                </label>
-                                            </div>
-                                            </div>
-                                            <div class="col-lg-6">
-      <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Under $250
+                                                    <input type="checkbox"> Ksh 25000 to ksh 50000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Under $250
+                                                    <input type="checkbox"> ksh 50000 to ksh 75000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Under $250
-                                                </label>
-                                            </div>
-                                            </div>
-                                            </div>
-  </div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-       <div class="row">
-    <div class="col-lg-6">
-      <div class="checkbox">
+                                                    <input type="checkbox"> ksh 75000 to Ksh 100000
+                                                </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Under $250
-                                                </label>
-                                            </div>
-                                            </div>
-                                            <div class="col-lg-6">
-      <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Under $250
-                                                </label>
-                                            </div>
-                                            </div>
-                                            </div>
-  </div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Not Sure
-                                                </label>
-                                            </div>
-  </div>
-</div>
+                                                    <input type="checkbox"> Ksh 100000 to
+                                                </label><br>
+                                                    </div>
+                                        </div>
+                                        <div id="menu1" class="tab-pane fade">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Job Duration</label>
+                                                        <select class="form-control">
+                                                            <option>Select Duration</option>
+                                                            <option>Less than 1 week</option>
+                                                            <option>Less than 1 month</option>
+                                                            <option>1 to 3 months</option>
+                                                            <option>3 to 6 months</option>
+                                                            <option>More than 6 months</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label>Hours Per Week</label>
+                                                        <select class="form-control">
+                                                            <option>Select hours per week</option>
+                                                            <option>1 hour to 10 hours</option>
+                                                            <option>10 hours to 40 hours</option>
+                                                            <option>40 hours plus</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                        <label>Rate per Hour</label>
+                                                    <div class="form-group">
+                                                        <div class="col-lg-6">
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control" type="text" placeholder="Amount in Ksh">
+                                                            <span class="help-block">
+                                                                <small>Minimum Amount</small>
+                                                            </span>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                        <div class="col-sm-10">
+                                                            <input class="form-control" type="text" placeholder="Amount in Ksh">
+                                                            <span class="help-block">
+                                                                <small>Maximum Amount</small>
+                                                            </span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="menu2" class="tab-pane fade">
+                                            <h3>Menu 2</h3>
+                                            <p>Some content in menu 2.</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                                                 <div class="col-lg-12">
                                                 <button type="submit" class="btn btn-success m-b-10 m-l-5">Submit</button>
                                                </div>

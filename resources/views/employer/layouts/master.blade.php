@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Adminity : Exam</title>
+    <title>Kazipoint: Africa's No.1 Jobs Site</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -44,19 +44,24 @@
                     <li class="label">Main</li>
                     <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard </a>
                     </li>
-                    <li class="label">My projects</li>
+                    <li class="label">HIRE</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="/projects">My Projects<span class="badge badge-primary">28</span></a></li>
-                            <li><a href="/projects/create">New Project</a></li>
+                            <li><a href="/projects/create">Post a Job</a></li>
+                            <li><a href="/freelancers">ReHire</a></li>
+                            <li><a href="/freelancers">Favorite Freelancers</a></li>
+                            <li><a href="{{route('findfreelancers')}}">Find a Freelancer</a></li>
+                            <li><a href="{{route('joblistings')}}">Job Listings</a></li>
                         </ul>
                     </li>
-                    <li class="label">Applicants</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>New Candidates<span class="badge badge-primary">28</span><span class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="#">Previous Candidates</a></li>
-                        </ul>
-                    </li>
+                    <li class="label">Manage</li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>Work Rooms</a></li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>Users</a></li>
+                    <li class="label">Payments</li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>Invoices</a></li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>Payment Method</a></li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>My Wallet</a></li>
+                    <li><a href="#"><i class="ti-pencil-alt"></i>Transaction Reports</a></li>
                 </ul>
             </div>
         </div>

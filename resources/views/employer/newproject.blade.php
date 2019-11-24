@@ -3,31 +3,14 @@
 <div class="content-wrap">
         <div class="main">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-8 p-r-0 title-margin-right">
-                        <div class="page-header">
-                            <div class="page-title">
-                                <h1>New Project</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /# column -->
-                    <div class="col-lg-4 p-l-0 title-margin-left">
-                        <div class="page-header">
-                            <div class="page-title">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /# column -->
-                </div>
+
                 <!-- /# row -->
                 <section id="main-content">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card alert">
                                 <div class="card-header">
-                                    <h4>New Project</h4>
+                                    <h4>New Job Post</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-elements">
@@ -36,12 +19,12 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label>Title:</label>
+                                                        <label>Job Title:</label>
                                                         <input type="text" name="title" class="form-control" placeholder="Project Title" required="" value="{{old('title')}}">
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Location:</label>
-                                                        <select name="level_required" class="form-control">
+                                                        <select name="location" class="form-control">
                                                             <option>Not Specified</option>
                                                             <option>Beginner</option>
                                                             <option>Intermediate</option>
@@ -52,7 +35,7 @@
                                         <div class="basic-form">
                                             <div class="form-group">
                                                 <label>Get quotes until:</label>
-                                                <input type="text" class="form-control calendar bg-ash" placeholder="dd/mm/yyyy" id="text-calendar">
+                                                <input type="text" name="quotes_until" class="form-control calendar bg-ash" placeholder="dd/mm/yyyy" id="text-calendar">
                                                 <span class="ti-calendar form-control-feedback booking-system-feedback m-t-30"></span>
                                             </div>
                                         </div>
@@ -69,7 +52,7 @@
 														</select>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Project Category:</label>
+                                                        <label>Job Category:</label>
                                                         <select name="category_id" class="form-control">
                                                         	<option>All Categories</option>
                                                         	@foreach($categories as $category)
@@ -81,7 +64,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
-                                                        <label>Description:</label>
+                                                        <label>Job Description:</label>
                                                         <textarea name="description" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
                                                     </div>
                                                 </div>
@@ -105,24 +88,26 @@
                                     <div class="tab-content">
                                         <div id="home" class="tab-pane fade in active">
                                             <div class="form-group">
+                                                <div class="form-check">
                                                         <label>
-                                                    <input type="checkbox"> Under Ksh 10000
+                                                    <input name="cost_range" type="radio" checked> Under Ksh 10000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Ksh 10000 to Ksh 25000
+                                                    <input name="cost_range" type="radio"> Ksh 10000 to Ksh 25000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Ksh 25000 to ksh 50000
+                                                    <input name="cost_range" type="radio"> Ksh 25000 to ksh 50000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> ksh 50000 to ksh 75000
+                                                    <input name="cost_range" type="radio"> ksh 50000 to ksh 75000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> ksh 75000 to Ksh 100000
+                                                    <input name="cost_range" type="radio"> ksh 75000 to Ksh 100000
                                                 </label><br>
                                                 <label>
-                                                    <input type="checkbox"> Ksh 100000 to
+                                                    <input name="cost_range" type="radio"> Ksh 100000 and above
                                                 </label><br>
+                                            </div>
                                                     </div>
                                         </div>
                                         <div id="menu1" class="tab-pane fade">
@@ -130,7 +115,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>Job Duration</label>
-                                                        <select class="form-control">
+                                                        <select name="duration" class="form-control">
                                                             <option>Select Duration</option>
                                                             <option>Less than 1 week</option>
                                                             <option>Less than 1 month</option>
@@ -143,7 +128,7 @@
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
                                                         <label>Hours Per Week</label>
-                                                        <select class="form-control">
+                                                        <select name="hours" class="form-control">
                                                             <option>Select hours per week</option>
                                                             <option>1 hour to 10 hours</option>
                                                             <option>10 hours to 40 hours</option>
@@ -156,7 +141,7 @@
                                                     <div class="form-group">
                                                         <div class="col-lg-6">
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="text" placeholder="Amount in Ksh">
+                                                            <input name="minimum" class="form-control" type="text" placeholder="Amount in Ksh">
                                                             <span class="help-block">
                                                                 <small>Minimum Amount</small>
                                                             </span>
@@ -164,7 +149,7 @@
                                                         </div>
                                                         <div class="col-lg-6">
                                                         <div class="col-sm-10">
-                                                            <input class="form-control" type="text" placeholder="Amount in Ksh">
+                                                            <input name="maximum" class="form-control" type="text" placeholder="Amount in Ksh">
                                                             <span class="help-block">
                                                                 <small>Maximum Amount</small>
                                                             </span>

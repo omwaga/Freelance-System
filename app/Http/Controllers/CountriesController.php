@@ -4,16 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Category;
-use App\Project;
-
-class ProjectsController extends Controller
+class CountriesController extends Controller
 {
     public function __construct()
     {
         $this->middleware(['auth', 'verified']);
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -21,10 +17,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $categories = Category::all(); 
-        $projects = Project :: where('user_id', auth()->id())->get();
-
-        return view('employer.projects', compact('projects', 'categories'));
+        //
     }
 
     /**
@@ -33,10 +26,8 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
-        $categories = Category::all(); 
-
-        return view('employer.newproject', compact('categories'));
+    {
+        return view('admin.newlocation');
     }
 
     /**
@@ -47,17 +38,7 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        // $attributes = request()->validate([
-        //     'category_id' => 'required',
-        //     'title' => ['required', 'min:3'],
-        //     'description' => 'required',
-        //     'level_required' => 'required',
-        // ]);
-
-        // Project::create($attributes + ['user_id' => auth()->id()]);
-
-        // return back();
+        //
     }
 
     /**

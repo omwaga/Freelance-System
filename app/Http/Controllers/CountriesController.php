@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Country;
+
 class CountriesController extends Controller
 {
     public function __construct()
@@ -27,7 +29,9 @@ class CountriesController extends Controller
      */
     public function create()
     {
-        return view('admin.newlocation');
+        $countries = Country::all();
+
+        return view('admin.newlocation', compact('countries'));
     }
 
     /**
@@ -38,7 +42,13 @@ class CountriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'country' => ['required','min:3'],
+        ]);
+
+        Country::create($attributes);
+
+        return back();
     }
 
     /**

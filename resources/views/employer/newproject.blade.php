@@ -14,6 +14,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-elements">
+                                        @include('employererrors')
                                         <form method="POST" action="/projects">
                                             @csrf
                                             <div class="row">
@@ -23,12 +24,12 @@
                                                         <input type="text" name="title" class="form-control" placeholder="Project Title" required="" value="{{old('title')}}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Location:</label>
-                                                        <select name="location" class="form-control">
-                                                            <option>Not Specified</option>
-                                                            <option>Beginner</option>
-                                                            <option>Intermediate</option>
-                                                            <option>Expert</option>
+                                                        <label>Country:</label>
+                                                        <select name="country_id" class="form-control">
+                                                            <option>Select Country</option>
+                                                            @foreach($countries as $country)
+                                                            <option value="{{$country->id}}">{{$country->country}}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                     <div class="col-md-6">
@@ -52,6 +53,15 @@
 														</select>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label>City:</label>
+                                                        <select name="city_id" class="form-control">
+                                                            <option>Select City/Region</option>
+                                                            @foreach($cities as $city)
+                                                            <option value="{{$city->id}}">{{$city->city}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label>Job Category:</label>
                                                         <select name="category_id" class="form-control">
                                                         	<option>All Categories</option>
@@ -65,7 +75,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <label>Job Description:</label>
-                                                        <textarea name="description" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
+                                                        <textarea id="desc" name="description" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Category;
 use App\Project;
+use App\City;
+use App\Country;
 
 class ProjectsController extends Controller
 {
@@ -35,8 +37,10 @@ class ProjectsController extends Controller
     public function create()
     { 
         $categories = Category::all(); 
+        $cities = City::all();
+        $countries = Country::all();
 
-        return view('employer.newproject', compact('categories'));
+        return view('employer.newproject', compact('categories', 'cities', 'countries'));
     }
 
     /**
@@ -47,13 +51,16 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        // $attributes = request()->validate([
-        //     'category_id' => 'required',
-        //     'title' => ['required', 'min:3'],
-        //     'description' => 'required',
-        //     'level_required' => 'required',
-        // ]);
+        $attributes = request()->validate([
+            'category_id' => 'required',
+            'city_id' => 'required',
+            'title' => ['required', 'min:3'],
+            'description' => 'required',
+            'level_required' => 'required',
+            'quotes_until' => 'required',
+        ]);
+
+        dd($attributes);
 
         // Project::create($attributes + ['user_id' => auth()->id()]);
 

@@ -71,6 +71,11 @@
         <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background3.css')}}" title="background3" media="screen" />
         <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background4.css')}}" title="background4" media="screen" />
         <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background5.css')}}" title="background5" media="screen" />
+
+        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'desc' );
+</script>
     </head>  
     <body>
 

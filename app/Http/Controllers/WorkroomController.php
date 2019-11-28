@@ -4,18 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Category;
 use App\Job;
-use App\City;
-use App\Country;
 
-class ProjectsController extends Controller
+class WorkroomController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth', 'verified']);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -23,10 +15,9 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $categories = Category::all(); 
-        $projects = Job::where('user_id', auth()->id())->get();
+        $jobs = Job::where('user_id', auth()->user()->id)->get();
 
-        return view('employer.projects', compact('projects', 'categories'));
+        return view('employer.workrooms', compact('jobs'));
     }
 
     /**
@@ -35,12 +26,8 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
-        $categories = Category::all(); 
-        $cities = City::all();
-        $countries = Country::all();
-
-        return view('employer.newproject', compact('categories', 'cities', 'countries'));
+    {
+        //
     }
 
     /**
@@ -51,24 +38,7 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        $attributes = request()->validate([
-            'category_id' => 'required',
-            'country_id' => 'required',
-            'city_id' => 'required',
-            'title' => ['required', 'min:3'],
-            'description' => ['required','min:60'],
-            'level_required' => 'required',
-            'quotes_until' => 'required',
-            'duration' => 'nullable',
-            'cost_range' => 'nullable',
-            'hours' => 'nullable',
-            'minimum' => 'nullable',
-            'maximum' => 'nullable',
-        ]);
-
-        Job::create($attributes + ['user_id' => auth()->id()]);
-
-        return back();
+        //
     }
 
     /**

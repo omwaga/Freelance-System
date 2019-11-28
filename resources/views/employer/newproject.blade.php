@@ -15,7 +15,7 @@
                                 <div class="card-body">
                                     <div class="basic-elements">
                                         @include('employererrors')
-                                        <form method="POST" action="/projects">
+                                        <form method="POST" action="/jobs">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">

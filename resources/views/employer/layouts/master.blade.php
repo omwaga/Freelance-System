@@ -47,7 +47,7 @@
                     <li class="label">HIRE</li>
                     <li><a class="sidebar-sub-toggle"><i class="ti-pencil-alt"></i>All Projects<span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                            <li><a href="/projects/create">Post a Job</a></li>
+                            <li><a href="/jobs/create">Post a Job</a></li>
                             <li><a href="/freelancers">ReHire</a></li>
                             <li><a href="/freelancers">Favorite Freelancers</a></li>
                             <li><a href="{{route('findfreelancers')}}">Find a Freelancer</a></li>
@@ -55,7 +55,7 @@
                         </ul>
                     </li>
                     <li class="label">Manage</li>
-                    <li><a href="#"><i class="ti-pencil-alt"></i>Work Rooms</a></li>
+                    <li><a href="{{route('workrooms')}}"><i class="ti-pencil-alt"></i>Work Rooms</a></li>
                     <li><a href="#"><i class="ti-pencil-alt"></i>Users</a></li>
                     <li class="label">Payments</li>
                     <li><a href="#"><i class="ti-pencil-alt"></i>Invoices</a></li>

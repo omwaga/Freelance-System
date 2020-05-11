@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\About;
 use App\Job;
+use App\Category;
 
 class PagesController extends Controller
 {
@@ -13,7 +14,8 @@ class PagesController extends Controller
     {
     	$projects = Job::all();
     	$details = About::where('id',  1)->first();
+    	$categories = Category::all();
 
-        return view('index', compact('details', 'projects'));
+        return view('index', compact('details', 'projects', 'categories'));
     }
 }

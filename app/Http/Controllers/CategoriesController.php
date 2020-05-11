@@ -45,7 +45,7 @@ class CategoriesController extends Controller
     {
         $attributes = request()->validate([
             'name' => ['required', 'min:3'],
-            'description' => ['required', 'min:25']
+            'description' => ['nullable', 'min:25']
         ]);
 
         Category::create($attributes);

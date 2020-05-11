@@ -303,12 +303,12 @@
 							<div class="collapse" id="category">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="/categories">
+										<a href="/admin/categories">
 											<span class="sub-item">All Categories</span>
 										</a>
 									</li>
 									<li>
-										<a href="/categories/create">
+										<a href="/admin/categories/create">
 											<span class="sub-item">New Category</span>
 										</a>
 									</li>
@@ -330,7 +330,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="/countries/create">
+										<a href="/admin/countries/create">
 											<span class="sub-item">New Location</span>
 										</a>
 									</li>
@@ -352,7 +352,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="/abouts/create">
+										<a href="/admin/abouts/create">
 											<span class="sub-item">New Details</span>
 										</a>
 									</li>

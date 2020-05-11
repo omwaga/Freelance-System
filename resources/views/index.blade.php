@@ -1,386 +1,810 @@
-@extends('layouts.master')
-@section('content')
-                <!--Start of Slider Area-->
-                <div class="slider-area">
-                    <div class="preview-2">
-                        <div id="nivoslider" class="slides">    
-                            <img src="images/slider/slider1.jpeg" alt="" title="#slider-1-caption1"/>
-                            <img src="images/slider/slider.jpeg" alt="" title="#slider-1-caption2"/>
-                        </div> 
-                        <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
-                            <div class="banner-content slider-1">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="text-content-wrapper">
-                                                <div class="text-content">
-                                                    <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="3s" data-wow-delay="0s">{{$details->banner1}}</h1>
-                                                    <p class="sub-title wow bounceInRight hidden-xs" data-wow-duration="3s" data-wow-delay="1s"> {{$details->bannerdetails1}}</p>
-                                                    <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="3s" data-wow-delay="2s">
-                                                        <a class="button slider-btn" href="{{route('registeremployer')}}">Register</a>                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div id="slider-1-caption2" class="nivo-html-caption nivo-caption">
-                            <div class="banner-content slider-2">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="text-content-wrapper">
-                                                <div class="text-content slide-2">
-                                                    <h1 class="title1 wow flipInX text-uppercase text-white mb-16" data-wow-duration="1s" data-wow-delay="0s">{{$details->banner2}}</h1>
-                                                    <p class="sub-title wow lightSpeedIn hidden-xs" data-wow-duration="1s" data-wow-delay=".2s"> {{$details->bannerdetails2}}</p>
-                                                    <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="1s" data-wow-delay=".6s">
-                                                        <a class="button slider-btn" href="#">Find a job</a>                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>   
-                    </div>
-                </div>
-                <!--End of Slider Area-->
-                <!--Start of Job Post Area-->
-                <div class="job-post-area ptb-120">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title text-center ">
-                                    <h2 class="uppercase">Recent Jobs</h2>
-                                    <div class="separator mt-35 mb-77">
-                                        <span><img src="images/icons/1.png" alt=""></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="job-post-container fix mb-70">
-                                    @foreach($projects as $project)
-                                    <div class="single-job-post fix">
-                                        <div class="job-title col-4 pl-30">
-                                            <div class="fix pl-30 mt-29">
-                                                <h4 class="mb-5">{{$project->title}}</h4>
-                                                <h6><a href="#">Location:</a></h6>
-                                            </div>
-                                        </div>
-                                        <div class="address col-4 pl-50">
-                                            <span class="mtb-30 block">Category:<br>
-                                            {{$project->category->name}}</span>
-                                        </div>
-                                        <div class="time-payment col-2 pl-60 text-center pt-22">
-                                            <span class="block mb-6">€ 200.00</span>
-                                            <a href="#" class="button button-red">{{$project->level_required}}</a>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                                <div class="text-center">
-                                    <a href="#" class="button large-button">Browse all jobs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Job Post Area -->
-                <!--Start of Job Post Area-->
-                <div class="job-post-area pb-120">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title text-center ">
-                                    <h2 class="uppercase">Featured Jobs</h2>
-                                    <div class="separator mt-35 mb-77">
-                                        <span><img src="images/icons/1.png" alt=""></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="job-post-container fix">
-                                    <div class="single-job-post fix">
-                                        <div class="job-title col-4 pl-30">
-                                            <span class="pull-left block mtb-17">
-                                                <a href="#"><img src="images/company-logo/3.png" alt=""></a>
-                                            </span>
-                                            <div class="fix pl-30 mt-29">
-                                                <h4 class="mb-5">Print Designer</h4>
-                                                <h5><a href="#">Bootexperts</a></h5>
-                                            </div>
-                                        </div>
-                                        <div class="address col-4 pl-50">
-                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
-                                            Alpharetta, GA-30009</span>
-                                        </div>
-                                        <div class="time-payment col-2 pl-60 text-center pt-22">
-                                            <span class="block mb-6">€ 500.00</span>
-                                            <a href="#" class="button">Part Time</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Job Post Area -->
-                <!--Start of Fun Factor Area-->
-                <div class="fun-factor-area bg-1 text-center fix bg-opacity-blue-10 ptb-120">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <div class="single-fun-factor">
-                                    <h3 class="pb-15 mb-23">Jobs</h3>
-                                    <h1><span class="counter">1250</span></h1>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="single-fun-factor">
-                                    <h3 class="pb-15 mb-23">Members</h3>
-                                    <h1><span class="counter">500</span></h1>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="single-fun-factor">
-                                    <h3 class="pb-15 mb-23">Resume</h3>
-                                    <h1><span class="counter">700</span></h1>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="single-fun-factor">
-                                    <h3 class="pb-15 mb-23">Company</h3>
-                                    <h1><span class="counter">1250</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of Fun Factor Area-->
-                <!--Start of Advertise Area-->
-                <div class="advertise-area ptb-120">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 col-lg-offset-1 col-md-6 col-xs-12">
-                                <div class="fix video-post">
-                                    <div class="player-blog" data-property="{videoURL:'https://youtu.be/U3YQMfV3dkQ',containment:'self',autoPlay:false, mute:false, startAt:1, opacity:1}">video Post</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <div class="advertise-content pl-15">
-                                    <h3 class="uppercase pb-16 mb-21 mt-26">Join Thousands of <br>
-                                    Companies That Rely on Jobify</h3>
-                                    <p class="pr-50">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.available, but the majority have suffered alteration in some form,</p>
-                                    <a href="#" class="button large-button mt-9">Get Started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of Advertise Area-->
-                <!--Testimonial Area Start-->
-                <div class="testimonial-area bg-2 text-center fix bg-opacity-blue-70 ptb-100">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                                <div class="testimonial-carousel carousel-style-one">
-                                    <div class="single-testimonial">
-                                        <div class="testimonial-img mb-18">
-                                            <img src="images/testimonial/profile.jpg" style="width: 100px;height: 100px;" alt="" />
-                                        </div>
-                                        <div class="testimonial-info">
-                                            <span class="testimonial-name uppercase text-white block">Kevin Roberts</span>
-                                            <span class="testimonial-title text-white block">CEO,Ajobko</span>
-                                        </div>
-                                        <div class="testimonial-text pt-46">
-                                            <p class="text-white p-0">I have already heard back about the internship I applied through Job Finder, that's the fastest job reply I've ever gotten and it's so much better than waiting weeks to hear back.I have already heard back about the internship I applied through Job Finder, that's the fastest job reply</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                <!--End of Testimonial Area-->
-                <!--Start of Blog Area-->
-                <div class="blog-area ptb-120">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-title text-center ">
-                                    <h2 class="uppercase">Our Blog</h2>
-                                    <div class="separator mt-35 mb-77">
-                                        <span><img src="images/icons/1.png" alt=""></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="blog-carousel carousel-style-two">
-                                <div class="col-xs-12">
-                                    <div class="single-blog hover-effect">
-                                        <div class="blog-image box-hover">
-                                            <a href="#" class="block">
-                                                <img src="images/blog/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="blog-text">
-                                            <div class="blog-date pt-12">
-                                                <span class="text-large block text-white">25</span>
-                                                <span class="uppercase block text-white">June</span>
-                                            </div>
-                                            <div class="blog-post-info">
-                                                <span class="pl-10"><i class="zmdi zmdi-account pr-8"></i>amir Khan</span>
-                                                <span class="pl-35"><i class="zmdi zmdi-favorite pr-8"></i>like</span>
-                                                <span class="pl-15"><i class="zmdi zmdi-comments pr-8"></i>comments</span>
-                                            </div>
-                                            <h5 class="pt-28 mb-6"><a href="#">There are many variations of passages</a></h5>
-                                            <p class="mb-21">It is a long established fact that a reader will be distracted by the readable content of a page when looking  its layout. The point of using Lorem Ipsum is tat it has a more-or-less normal distribution of letters</p>
-                                            <a href="#" class="button large-button">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="single-blog hover-effect">
-                                        <div class="blog-image box-hover">
-                                            <a href="#" class="block">
-                                                <img src="images/blog/2.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="blog-text">
-                                            <div class="blog-date pt-12">
-                                                <span class="text-large block text-white">25</span>
-                                                <span class="uppercase block text-white">June</span>
-                                            </div>
-                                            <div class="blog-post-info">
-                                                <span class="pl-10"><i class="zmdi zmdi-account pr-8"></i>amir Khan</span>
-                                                <span class="pl-35"><i class="zmdi zmdi-favorite pr-8"></i>like</span>
-                                                <span class="pl-15"><i class="zmdi zmdi-comments pr-8"></i>comments</span>
-                                            </div>
-                                            <h5 class="pt-28 mb-6"><a href="#">There are many variations of passages</a></h5>
-                                            <p class="mb-21">It is a long established fact that a reader will be distracted by the readable content of a page when looking  its layout. The point of using Lorem Ipsum is tat it has a more-or-less normal distribution of letters</p>
-                                            <a href="#" class="button large-button">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="single-blog hover-effect">
-                                        <div class="blog-image box-hover">
-                                            <a href="#" class="block">
-                                                <img src="images/blog/3.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="blog-text">
-                                            <div class="blog-date pt-12">
-                                                <span class="text-large block text-white">25</span>
-                                                <span class="uppercase block text-white">June</span>
-                                            </div>
-                                            <div class="blog-post-info">
-                                                <span class="pl-10"><i class="zmdi zmdi-account pr-8"></i>amir Khan</span>
-                                                <span class="pl-35"><i class="zmdi zmdi-favorite pr-8"></i>like</span>
-                                                <span class="pl-15"><i class="zmdi zmdi-comments pr-8"></i>comments</span>
-                                            </div>
-                                            <h5 class="pt-28 mb-6"><a href="#">There are many variations of passages</a></h5>
-                                            <p class="mb-21">It is a long established fact that a reader will be distracted by the readable content of a page when looking  its layout. The point of using Lorem Ipsum is tat it has a more-or-less normal distribution of letters</p>
-                                            <a href="#" class="button large-button">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="single-blog hover-effect">
-                                        <div class="blog-image box-hover">
-                                            <a href="#" class="block">
-                                                <img src="images/blog/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="blog-text">
-                                            <div class="blog-date pt-12">
-                                                <span class="text-large block text-white">25</span>
-                                                <span class="uppercase block text-white">June</span>
-                                            </div>
-                                            <div class="blog-post-info">
-                                                <span class="pl-10"><i class="zmdi zmdi-account pr-8"></i>amir Khan</span>
-                                                <span class="pl-35"><i class="zmdi zmdi-favorite pr-8"></i>like</span>
-                                                <span class="pl-15"><i class="zmdi zmdi-comments pr-8"></i>comments</span>
-                                            </div>
-                                            <h5 class="pt-28 mb-6"><a href="#">There are many variations of passages</a></h5>
-                                            <p class="mb-21">It is a long established fact that a reader will be distracted by the readable content of a page when looking  its layout. The point of using Lorem Ipsum is tat it has a more-or-less normal distribution of letters</p>
-                                            <a href="#" class="button large-button">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of Blog Area-->
-                <!--Start of Social Link Area-->
-                <div class="social-link-area ptb-40 dark-blue-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 fix col-xs-12 col-sm-6">
-                                <div class="footer-logo pull-left">
-                                    <a href="index.html" class="block"><img src="images/logo/footer-logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 fix col-xs-12 col-sm-6">
-                                <div class="social-links pull-right">
-                                    <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                    <a href="#"><i class="zmdi zmdi-rss"></i></a>
-                                    <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                                    <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
-                                    <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of Social Link Area--> 
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta tag -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="Radix" content="Responsive Multipurpose Business Template">
+        <meta name='copyright' content='Radix'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        
+        <!-- Title Tag -->
+        <title>Radix &#8739; Creative Business & Consulting HTML5 Template</title>
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">    
+       
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
+        
+        <!-- Bootstrap Css -->
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+        <!-- Slick Nav CSS -->
+        <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}">
+        <!-- Cube Portfolio CSS -->
+        <link rel="stylesheet" href="{{asset('css/cubeportfolio.min.css')}}">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{{asset('css/magnific-popup.min.css')}}">
+        <!-- Fancy Box CSS -->
+        <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="{{asset('css/niceselect.css')}}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{{asset('css/owl.theme.default.css')}}">
+        <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+        <!-- Slick Slider CSS -->
+        <link rel="stylesheet" href="{{asset('css/slickslider.min.css')}}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
+        
+        <!-- Radix StyleShet CSS -->
+        <link rel="stylesheet" href="{{asset('css/reset.css')}}">    
+        <link rel="stylesheet" href="{{asset('style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/responsive.css')}}">   
 
-                <!--Start of Register Form-->
-        <div id="quickview-register">
-            <!-- Modal -->
-            <div class="modal fade" id="register" tabindex="-1" role="dialog">
-                <div class="modal-dialog register" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+        <!-- Radix Color CSS -->
+        <link rel="stylesheet" href="{{asset('css/color/color1.css')}}">
+        <link rel="stylesheet" href="#" id="colors">    
+    </head>
+    <body>
+    
+        <!-- Preloader -->
+         <div class="preloader">
+          <div class="preloader-inner">
+            <div class="single-loader one"></div>
+            <div class="single-loader two"></div>
+            <div class="single-loader three"></div>
+            <div class="single-loader four"></div>
+            <div class="single-loader five"></div>
+            <div class="single-loader six"></div>
+            <div class="single-loader seven"></div>
+            <div class="single-loader eight"></div>
+            <div class="single-loader nine"></div>
+          </div>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Get Pro Button -->
+        <ul class="pro-features">
+            <a class="get-pro" href="#">Get Pro</a>
+            <li class="title">Pro Version Some Features</li>
+            <li>Multipage & Onepage Homepage</li>
+            <li>26+ HTML5 pages</li>
+            <li>All Premium Features</li>
+            <li>Documentation Included</li>
+            <li>6+ Month Dedicated Support!</li>
+            <div class="button">
+                <a href="https://www.codeglim.com/downloads/radix-multipurpose-business-consulting-template/" target="_blank" class="btn">Buy Pro Version</a>
+                <a href="https://www.codeglim.com/downloads/radix-multipurpose-business-consulting-template/" target="_blank" class="btn">View Details</a>
+            </div>
+        </ul>
+        
+        <!-- Start Header -->
+        <header id="header" class="header">
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <!-- Contact -->
+                            <ul class="contact">
+                                <li><i class="fa fa-headphones"></i> +(123) 45678910</li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:info@yourmail.com">info@yourmail.com</a></li>
+                                <li><i class="fa fa-clock-o"></i>Opening: 09am-5pm</li>
+                            </ul>
+                            <!--/ End Contact -->
                         </div>
-                        <div class="modal-body">
-                            <div class="form-pop-up-content ptb-60 pl-60 pr-60">
-                                <div class="area-title text-center mb-43">
-                                    <h2 class="pt-7 pb-7 pl-40 pr-40">Sign Up</h2>
+                        <div class="col-lg-6 col-12">
+                            <div class="topbar-right">
+                                <!-- Search Form -->
+                                <div class="search-form active">
+                                    <a class="icon" href="#"><i class="fa fa-search"></i></a>
+                                    <form class="form" action="#">
+                                        <input placeholder="Search & Enter" type="search">
+                                    </form>
                                 </div>
-                                <form method="post" action="#">
-                                    <div class="form-box">
-                                        <input type="text" name="fullname" placeholder="Full Name" class="mb-14">
-                                        <input type="text" name="username" placeholder="User Name" class="mb-14">
-                                        <input type="email" name="email" placeholder="Email" class="mb-14">
-                                        <input type="password" name="pass" placeholder="Password" class="mb-14">
-                                        <input type="password" name="re_pass" placeholder="Confirm Password">
-                                    </div>
-                                    <div class="fix ptb-30">
-                                        <span class="remember">
-                                            <input class="p-0 pull-left" type="checkbox">
-                                            <span class="fix block">There are many variations of passages of Lorem Ipsum available</span> 
-                                        </span>
-                                    </div>
-                                    <div class="text-center">
-                                        <button type="submit" class="text-uppercase">Register</button>
-                                    </div>
-                                </form>
+                                <!--/ End Search Form -->
+                                <!-- Social -->
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                                <!--/ End Social -->
                             </div>
-                        </div>  
-                    </div>  
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <!--/ End Topbar -->
+            <!-- Middle Bar -->
+            <div class="middle-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-12">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                            </div>
+                            <div class="link"><a href="index.html"><span>R</span>adix</a></div>
+                            <!--/ End Logo -->
+                            <button class="mobile-arrow"><i class="fa fa-bars"></i></button>
+                            <div class="mobile-menu"></div>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <!-- Main Menu -->
+                            <div class="mainmenu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li><a href="#">Solutions<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">Business Size</a></li>
+                                                <li><a href="#">Start Ups</a></li>
+                                                <li><a href="#">SMB</a></li>
+                                                <li><a href="#">Enterprise</a></li>
+
+                                                <li><a href="#">Department</a></li>
+                                                <li><a href="#">Marketing</a></li>
+                                                <li><a href="#">Operations</a></li>
+                                                <li><a href="#">Engineering</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Login</a></li>   
+                                        <li><a href="#">Sign Up</a></li> 
+                                    </ul>
+                                </nav>
+                                <!-- Button -->
+                                <div class="button">
+                                    <a href="#" class="btn">Post a Job</a>
+                                </div>
+                                <!--/ End Button -->
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--End of Register Form-->     
-@endsection
+            <!--/ End Middle Bar -->
+        </header>
+        <!--/ End Header -->
+            
+        <!-- Hero Area -->
+        <section id="hero-area" class="hero-area">
+            <!-- Slider -->
+            <div class="slider-area">
+                <!-- Single Slider -->
+                <div class="single-slider" style="background-image:url('images/slider/slider-image1.jpg')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-6 col-12">
+                                <!-- Slider Text -->
+                                <div class="slider-text">
+                                    <h1>Radix <span>Business</span> In-demand talent on demand.TM<span>!</span></h1>
+                                    <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent.</p>
+                                    <div class="button">
+                                        <a href="portfolio-3-column.html" class="btn">Our Portfolio</a>
+                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                    </div>
+                                </div>
+                                <!--/ End Slider Text -->
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-12">
+                                <!-- Image Gallery -->
+                                <div class="image-gallery">
+                                    <div class="single-image">
+                                        <img src="images/slider/gallery-image1.jpg" alt="#">
+                                    </div>
+                                    <div class="single-image two">
+                                        <img src="images/slider/gallery-image2.jpg" alt="#">
+                                    </div>
+                                </div>
+                                <!--/ End Image Gallery -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ End Single Slider -->
+                <!-- Single Slider -->
+                <div class="single-slider slider-right" style="background-image:url('images/slider/slider-image2.jpg')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-6 col-12">
+                                <!-- Image Gallery -->
+                                <div class="image-gallery">
+                                    <div class="single-image">
+                                        <img src="images/slider/gallery-image1.jpg" alt="#">
+                                    </div>
+                                    <div class="single-image two">
+                                        <img src="images/slider/gallery-image2.jpg" alt="#">
+                                    </div>
+                                </div>
+                                <!--/ End Image Gallery -->
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-12">
+                                <!-- Slider Text -->
+                                <div class="slider-text text-right">
+                                    <h1>Radix <span>Business</span> In-demand talent on demand.TM<span>!</span></h1>
+                                    <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent. </p>
+                                    <div class="button">
+                                        <a href="services.html" class="btn">Our Services</a>
+                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                    </div>
+                                </div>
+                                <!--/ End Slider Text -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ End Single Slider -->
+                <!-- Single Slider -->
+                <div class="single-slider slider-center" style="background-image:url('images/slider/slider-image1.jpg')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1 col-12">
+                                <!-- Slider Text -->
+                                <div class="slider-text text-center">
+                                    <h1>In-demand talent on demand.TM</h1>
+                                    <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent.</p>
+                                    <div class="button">
+                                        <a href="about-us.html" class="btn">About Company</a>
+                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                    </div>
+                                </div>
+                                <!--/ End Slider Text -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ End Single Slider -->
+            </div>
+            <!--/ End Slider -->
+        </section>
+        <!--/ End Hero Area -->
+
+        <!-- Services -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeInUp">
+                        <div class="section-title">
+                            <span class="title-bg">Services</span>
+                            <h1>Find quality talent or agencies</h1>
+                            <p>Sed lorem enim, faucibus at erat eget, laoreet tincidunt tortor. Ut sed mi nec ligula bibendum aliquam. Sed scelerisque maximus magna, a vehicula turpis Proin<p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="service-slider">
+                            <!-- Single Service -->
+                            @foreach($categories as $category)
+                            <div class="single-service">
+                                <i class="fa fa-magic"></i>
+                                <h2><a href="service-single.html">{{$category->name}}</a></h2>
+                                <p>welcome to our consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                            </div>
+                            @endforeach
+                            <!-- End Single Service -->
+                        </div>
+                        <div class="service-slider">
+                            <!-- Single Service -->
+                            <div class="single-service">
+                                <i class="fa fa-magic"></i>
+                                <h2><a href="service-single.html">Consulting</a></h2>
+                                <p>welcome to our consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</p>
+                            </div>
+                            <!-- End Single Service -->
+                            <!-- Single Service -->
+                            <div class="single-service">
+                                <i class="fa fa-lightbulb-o"></i>
+                                <h2><a href="service-single.html">Creative Idea</a></h2>
+                                <p>Creative and erat, porta non porttitor non, dignissim et enim Aenean ac enim feugiat classical Latin</p>
+                            </div>
+                            <!-- End Single Service -->
+                            <!-- Single Service -->
+                            <div class="single-service">
+                                <i class="fa fa-wordpress"></i>
+                                <h2><a href="service-single.html">Development</a></h2>
+                                <p>just fine erat, porta non porttitor non, dignissim et enim Aenean ac enim feugiat classical Latin</p>
+                            </div>
+                            <!-- End Single Service -->
+                            <!-- Single Service -->
+                            <div class="single-service">
+                                <i class="fa fa-bullhorn "></i>
+                                <h2><a href="service-single.html">Marketing</a></h2>
+                                <p>Possible of erat, porta non porttitor non, dignissim et enim Aenean ac enim feugiat classical Latin</p>
+                            </div>
+                            <!-- End Single Service -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Services -->
+        
+        <!-- Fun Facts -->
+        <section id="fun-facts" class="fun-facts section">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-lg-5 col-12 wow fadeInLeft" data-wow-delay="0.5s">
+                        <div class="text-content">
+                            <div class="section-title">
+                                <h1><span>Our achievements</span>With smooth animation numbering </h1>
+                                <p>Pellentesque vitae gravida nulla. Maecenas molestie ligula quis urna viverra venenatis. Donec at ex metus. Suspendisse ac est et magna viverra eleifend. Etiam varius auctor est eu eleifend.</p>
+                                <a href="contact.html" class="btn primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="row">   
+                            <div class="col-lg-6 col-md-6 col-12 wow fadeIn" data-wow-delay="0.6s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-clock-o"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">35</span></p>
+                                        <h4>years of success</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 wow fadeIn" data-wow-delay="0.8s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-bullseye"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">88</span>K</p>
+                                        <h4>Project Complete</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 wow fadeIn" data-wow-delay="1s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-dollar"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">10</span>M</p>
+                                        <h4>Total Earnings</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 wow fadeIn" data-wow-delay="1.2s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-trophy"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">32</span></p>
+                                        <h4>Winning Awards</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Fun Facts -->
+
+        
+        <!-- Fun Facts -->
+        <section id="fun-facts" class="fun-facts section">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <div class="row">   
+                            <div class="col-lg-3 col-md-3 col-12 wow fadeIn" data-wow-delay="0.6s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-clock-o"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">35</span></p>
+                                        <h4>years of success</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 wow fadeIn" data-wow-delay="0.8s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-bullseye"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">88</span>K</p>
+                                        <h4>Project Complete</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 wow fadeIn" data-wow-delay="1s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-dollar"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">10</span>M</p>
+                                        <h4>Total Earnings</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 wow fadeIn" data-wow-delay="1.2s">
+                                <!-- Single Fact -->
+                                <div class="single-fact">
+                                    <div class="icon"><i class="fa fa-trophy"></i></div>
+                                    <div class="counter">
+                                        <p><span class="count">32</span></p>
+                                        <h4>Winning Awards</h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single Fact -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Fun Facts -->
+
+        <!-- Call To Action -->
+        <section class="call-to-action section" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 wow fadeInUp">
+                        <div class="call-to-main">
+                            <h2>We have 35+ Years of experiences for creating creative website project.</h2>
+                            <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim. Aenean ac enim feugiat, facilisis arcu vehicula, consequat sem. Cras et vulputate nisi, ac dignissim mi. Etiam laoreet</p>
+                            <a href="contact.html" class="btn">Buy This Theme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Call To Action -->
+        
+        <!-- Blogs Area -->
+        <section class="blogs-main section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeInUp">
+                        <div class="section-title">
+                            <span class="title-bg">News</span>
+                            <h1>How IT WORKS</h1>
+                            <p>Sed lorem enim, faucibus at erat eget, laoreet tincidunt tortor. Ut sed mi nec ligula bibendum aliquam. Sed scelerisque maximus magna, a vehicula turpis Proin<p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row blog-slider">
+                            <div class="col-lg-4 col-12">
+                                <!-- Single Blog -->
+                                <div class="single-blog">
+                                    <div class="blog-head">
+                                        <img src="images/blogs/blog1.jpg" alt="#">
+                                    </div>
+                                    <div class="blog-bottom">
+                                        <div class="blog-inner">
+                                            <h4><a href="blog-single.html">Recognizing the need is the primary</a></h4>
+                                            <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim. Aenean ac tincidunt tortor sedelon bond</p>
+                                            <div class="meta">
+                                                <span><i class="fa fa-bolt"></i><a href="#">Marketing</a></span>
+                                                <span><i class="fa fa-calendar"></i>03 May, 2018</span>
+                                                <span><i class="fa fa-eye"></i><a href="#">333k</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Blog -->
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <!-- Single Blog -->
+                                <div class="single-blog">
+                                    <div class="blog-head">
+                                        <img src="images/blogs/blog3.jpg" alt="#">
+                                    </div>
+                                    <div class="blog-bottom">
+                                        <div class="blog-inner">
+                                            <h4><a href="blog-single.html">10 ways to improve your startup Business</a></h4>
+                                            <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim. Aenean ac tincidunt tortor sedelon bond</p>
+                                            <div class="meta">
+                                                <span><i class="fa fa-bolt"></i><a href="#">Brand</a></span>
+                                                <span><i class="fa fa-calendar"></i>15 April, 2018</span>
+                                                <span><i class="fa fa-eye"></i><a href="#">10m</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Blog -->
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <!-- Single Blog -->
+                                <div class="single-blog">
+                                    <div class="blog-head">
+                                        <img src="images/blogs/blog4.jpg" alt="#">
+                                    </div>
+                                    <div class="blog-bottom">
+                                        <div class="blog-inner">
+                                            <h4><a href="blog-single.html">Recognizing the need is the primary</a></h4>
+                                            <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim. Aenean ac tincidunt tortor sedelon bond</p>
+                                            <div class="meta">
+                                                <span><i class="fa fa-bolt"></i><a href="#">Online</a></span>
+                                                <span><i class="fa fa-calendar"></i>25 March, 2018</span>
+                                                <span><i class="fa fa-eye"></i><a href="#">38k</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Blog -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Blogs Area -->
+        
+        <!-- Partners -->
+        <section id="partners" class="partners section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeInUp">
+                        <div class="section-title">
+                            <span class="title-bg">Clients</span>
+                            <h1>Our Partners</h1>
+                            <p>Sed lorem enim, faucibus at erat eget, laoreet tincidunt tortor. Ut sed mi nec ligula bibendum aliquam. Sed scelerisque maximus magna, a vehicula turpis Proin<p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="partners-inner">
+                            <div class="row no-gutters">
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-1.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-2.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-3.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-4.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-5.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-6.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-7.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-8.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-5.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-6.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-7.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                                <!-- Single Partner -->
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="single-partner">
+                                        <a href="#" target="_blank"><img src="images/partner-3.png" alt="#"></a>
+                                    </div>
+                                </div>
+                                <!--/ End Single Partner -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ End Partners -->
+        
+        <!-- Footer -->
+        <footer id="footer" class="footer wow fadeIn">
+            <!-- Top Arrow -->
+            <div class="top-arrow">
+                <a href="#header" class="btn"><i class="fa fa-angle-up"></i></a>
+            </div>
+            <!--/ End Top Arrow -->
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- About Widget -->
+                            <div class="single-widget about">
+                                <h2>Office Location</h2>
+                                <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa fa-map-marker"></i>Address: House 20, Sector-7, Road-5, California, US</li>
+                                    <li><i class="fa fa-headphones"></i>Phone: +(123) 45678 910</li>
+                                    <li><i class="fa fa-headphones"></i>Email:<a href="mailto:info@youremail.com">Info@yourwebsite.com</a></li>
+                                </ul>   
+                            </div>
+                            <!--/ End About Widget -->
+                        </div>  
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Links Widget -->
+                            <div class="single-widget links">
+                                <h2>Quick Links</h2>
+                                <ul class="list">
+                                    <li><a href="about-us.html"><i class="fa fa-caret-right"></i>About Our Company</a></li>
+                                    <li><a href="services.html"><i class="fa fa-caret-right"></i>Our Latest services</a></li>
+                                    <li><a href="projects-masonry.html"><i class="fa fa-caret-right"></i>Our Recent Project</a></li>
+                                    <li><a href="blogs-right-sidebar.html"><i class="fa fa-caret-right"></i>Latest Blog</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-caret-right"></i>Help Desk</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-caret-right"></i>Contact With Us</a></li>
+                                </ul>
+                            </div>
+                            <!--/ End Links Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Twitter Widget -->
+                            <div class="single-widget twitter">
+                                <h2>Recent Tweets</h2>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Mauris sagittis nibh et nibh commodo vehicula. Praesent blandit nulla nec tristique egestas. Integer in volutpat turpis</p>
+                                </div>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Maecenas vulputate, dui eget varius sagittis, justo nunc efficitur sem, id vestibulum</p>
+                                </div>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Praesent facilisis tortor nec diam suscipit condimentum</p>
+                                </div>
+                            </div>
+                            <!--/ End Twitter Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Newsletter Widget -->
+                            <div class="single-widget newsletter">
+                                <h2>Newsletter</h2>
+                                <p>consectetur adipiscing elit. Vestibulum vel sapien et lacus tempus varius. In finibus lorem vel.</p>
+                                <form>
+                                    <input placeholder="Your Name" type="text">
+                                    <input placeholder="your email" type="email">
+                                    <button type="submit" class="button primary">Subscribe Now!</button>
+                                </form> 
+                            </div>
+                            <!--/ End Newsletter Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Footer Top -->
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="bottom-top">
+                                <!-- Social -->
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                                <!--/ End Social -->
+                                <!-- Copyright -->
+                                <div class="copyright">
+                                    <p>&copy; 2020 All Right Reserved. Design & Development By <a target="_blank" href="http://themelamp.com">ThemeLamp.com</a>, Theme Provided By  <a target="_blank" href="https://codeglim.com">CodeGlim.com</a></p>
+                                </div>
+                                <!--/ End Copyright -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Footer Bottom -->
+        </footer>
+        <!--/ End footer -->
+
+        <!-- Jquery -->
+        <script src="{{asset('js/jquery.min.js')}}"></script>
+        <script src="{{asset('js/jquery-migrate.min.js')}}"></script>
+        <!-- Popper JS -->
+        <script src="{{asset('js/popper.min.js')}}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{{asset('js/bootstrap.min.js')}}"></script> 
+        <!-- Colors JS -->
+        <script src="{{asset('js/colors.js')}}"></script>
+        <!-- Modernizer JS -->
+        <script src="{{asset('js/modernizr.min.js')}}"></script>
+        <!-- Nice select JS -->
+        <script src="{{asset('js/niceselect.js')}}"></script>
+        <!-- Tilt Jquery JS -->
+        <script src="{{asset('js/tilt.jquery.min.js')}}"></script>
+        <!-- Fancybox  -->
+        <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
+        <!-- Jquery Nav -->
+        <script src="{{asset('js/jquery.nav.js')}}"></script>
+        <!-- Owl Carousel JS -->
+        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+        <!-- Slick Slider JS -->
+        <script src="{{asset('js/slickslider.min.js')}}"></script>
+        <!-- Cube Portfolio JS -->
+        <script src="{{asset('js/cubeportfolio.min.js')}}"></script>
+        <!-- Slicknav JS -->
+        <script src="{{asset('js/jquery.slicknav.min.js')}}"></script>
+        <!-- Jquery Steller JS -->
+        <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
+        <!-- Magnific Popup JS -->
+        <script src="{{asset('js/magnific-popup.min.js')}}"></script>
+        <!-- Wow JS -->
+        <script src="{{asset('js/wow.min.js')}}"></script>
+        <!-- CounterUp JS -->
+        <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
+        <!-- Waypoint JS -->
+        <script src="{{asset('js/waypoints.min.js')}}"></script>
+        <!-- Jquery Easing JS -->
+        <script src="{{asset('js/easing.min.js')}}"></script>
+        <!-- Google Map JS -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>  -->
+        <script src="{{asset('js/gmap.min.js')}}"></script>
+        <!-- Main JS -->
+        <script src="{{asset('js/main.js')}}"></script>
+    </body>
+</html>

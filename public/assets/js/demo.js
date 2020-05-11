@@ -18,8 +18,8 @@ Circles.create({
 //Notify
 $.notify({
 	icon: 'flaticon-alarm-1',
-	title: 'Kazi Point',
-	message: 'Number One online Jobs Site',
+	title: 'Atlantis Lite',
+	message: 'Free Bootstrap 4 Admin Dashboard',
 },{
 	type: 'info',
 	placement: {

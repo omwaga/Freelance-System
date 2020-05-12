@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmployerProfilesTable extends Migration
+class CreateStatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,16 @@ class CreateEmployerProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('employer_profiles', function (Blueprint $table) {
+        Schema::create('states', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBiginteger('country_id');
+            $table->string('name');
             $table->timestamps();
+
+        $table->foreign('country_id')
+                ->references('id')
+                ->on('countries')
+                ->onDelete('cascade');
         });
     }
 
@@ -26,6 +33,6 @@ class CreateEmployerProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employer_profiles');
+        Schema::dropIfExists('name');
     }
 }

@@ -12,15 +12,13 @@
 */
 
 Route::get('/', 'PagesController@index')->name('homepage');
-Route::get('/recruiter', 'EmployerController@employer');
 Route::get('/user', 'UserController@index');
 
 Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
-Route::get('/employers', 'AdminController@employers')->name('employers');
 
 Route::prefix('admin')->group(function()
 {
-	Route::get('/admin', 'AdminController@index')->name('admin');
+	Route::get('', 'AdminController@index')->name('admin');
     Route::resource('abouts', 'AboutsController');
     Route::resource('categories', 'CategoriesController');
     Route::resource('jobs', 'ProjectsController');
@@ -30,6 +28,14 @@ Route::prefix('admin')->group(function()
     Route::resource('countries', 'CountriesController');
     Route::resource('cities', 'CitiesController');
     Route::get('/workrooms', 'WorkroomController@index')->name('workrooms');
+    Route::get('/employers', 'AdminController@employers')->name('employers');
+});
+
+Route::prefix('employer')->group(function()
+{
+    Route::get('/login', 'PagesController@employerlogin')->name('login-form');
+    Route::post('/login','Auth\EmployerLoginController@login')->name('employer-login');
+    Route::get('/dashboard', 'EmployerController@employer')->name('employer-dashboard');
 });
 
 Auth::routes(['verify' => true]);

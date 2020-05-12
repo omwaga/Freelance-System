@@ -18,4 +18,10 @@ class PagesController extends Controller
 
         return view('index', compact('details', 'projects', 'categories'));
     }
+
+    // return the employer login form
+    public function employerlogin()
+    {
+    	return view('auth.employer-login');
+    }
 }

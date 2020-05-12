@@ -1,134 +1,328 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
     <head>
+        <!-- Meta tag -->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home One || JobHelp</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Radix" content="Responsive Multipurpose Business Template">
+        <meta name='copyright' content='Radix'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
         
-        <!-- favicon
-        ============================================ -->        
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Title Tag -->
+        <title>Radix &#8739; Creative Business & Consulting HTML5 Template</title>
         
-        <!-- Google Fonts
-        ============================================ -->        
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">    
+       
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
         
-        <!-- All css files are included here
-        ============================================ -->    
-        <!-- Bootstrap CSS
-        ============================================ -->        
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}"> 
+        <!-- Bootstrap Css -->
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+        <!-- Slick Nav CSS -->
+        <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}">
+        <!-- Cube Portfolio CSS -->
+        <link rel="stylesheet" href="{{asset('css/cubeportfolio.min.css')}}">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{{asset('css/magnific-popup.min.css')}}">
+        <!-- Fancy Box CSS -->
+        <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="{{asset('css/niceselect.css')}}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{{asset('css/owl.theme.default.css')}}">
+        <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+        <!-- Slick Slider CSS -->
+        <link rel="stylesheet" href="{{asset('css/slickslider.min.css')}}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
         
-        <!-- This core.css file contents all plugins css file
-        ============================================ -->
-        <link rel="stylesheet" href="{{ asset('css/core.css')}}">
-        
-        <!-- Theme shortcodes/elements style
-        ============================================ -->  
-        <link rel="stylesheet" href="{{ asset('css/shortcode/shortcodes.css')}}">
-        
-        <!-- Color Swithcer CSS
-        ============================================ -->
-        <link rel="stylesheet" href="{{ asset('css/plugins/color-switcher.css')}}">
-        
-        <!--  Theme main style
-        ============================================ -->  
-        <link rel="stylesheet" href="{{ asset('style.css')}}">
-        
-        <!-- Color CSS
-        ============================================ -->
-        <link rel="stylesheet" href="{{ asset('css/plugins/color.css')}}">
-        
-        <!-- Responsive CSS
-        ============================================ -->
-        <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-        
-        <!-- Modernizr JS -->
-        <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>        
-        
-        <!-- Color Css Files
-        ============================================ -->    
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-one.css')}}" title="color-one" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-two.css')}}" title="color-two" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-three.css')}}" title="color-three" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-four.css')}}" title="color-four" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-five.css')}}" title="color-five" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-six.css')}}" title="color-six" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-seven.css')}}" title="color-seven" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-eight.css')}}" title="color-eight" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-nine.css')}}" title="color-nine" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-ten.css')}}" title="color-ten" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/color-ten.css')}}" title="color-ten" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/pattren1.css')}}" title="pattren1" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/pattren2.css')}}" title="pattren2" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/pattren3.css')}}" title="pattren3" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/pattren4.css')}}" title="pattren4" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/pattren5.css')}}" title="pattren5" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background1.css')}}" title="background1" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background2.css')}}" title="background2" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background3.css')}}" title="background3" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background4.css')}}" title="background4" media="screen" />
-        <link rel="alternate stylesheet" type="text/css" href="{{ asset('switcher/background5.css')}}" title="background5" media="screen" />
+        <!-- Radix StyleShet CSS -->
+        <link rel="stylesheet" href="{{asset('css/reset.css')}}">    
+        <link rel="stylesheet" href="{{asset('style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/responsive.css')}}">   
 
-        <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-<script>
-    CKEDITOR.replace( 'desc' );
-</script>
-    </head>  
+        <!-- Radix Color CSS -->
+        <link rel="stylesheet" href="{{asset('css/color/color1.css')}}">
+        <link rel="stylesheet" href="#" id="colors">    
+    </head>
     <body>
+    
+        <!-- Preloader -->
+         <div class="preloader">
+          <div class="preloader-inner">
+            <div class="single-loader one"></div>
+            <div class="single-loader two"></div>
+            <div class="single-loader three"></div>
+            <div class="single-loader four"></div>
+            <div class="single-loader five"></div>
+            <div class="single-loader six"></div>
+            <div class="single-loader seven"></div>
+            <div class="single-loader eight"></div>
+            <div class="single-loader nine"></div>
+          </div>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Get Pro Button -->
+        <ul class="pro-features">
+            <a class="get-pro" href="#">Get Pro</a>
+            <li class="title">Pro Version Some Features</li>
+            <li>Multipage & Onepage Homepage</li>
+            <li>26+ HTML5 pages</li>
+            <li>All Premium Features</li>
+            <li>Documentation Included</li>
+            <li>6+ Month Dedicated Support!</li>
+            <div class="button">
+                <a href="https://www.codeglim.com/downloads/radix-multipurpose-business-consulting-template/" target="_blank" class="btn">Buy Pro Version</a>
+                <a href="https://www.codeglim.com/downloads/radix-multipurpose-business-consulting-template/" target="_blank" class="btn">View Details</a>
+            </div>
+        </ul>
+        
+        <!-- Start Header -->
+        <header id="header" class="header">
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <!-- Contact -->
+                            <ul class="contact">
+                                <li><i class="fa fa-headphones"></i> +(123) 45678910</li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:info@yourmail.com">info@yourmail.com</a></li>
+                                <li><i class="fa fa-clock-o"></i>Opening: 09am-5pm</li>
+                            </ul>
+                            <!--/ End Contact -->
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="topbar-right">
+                                <!-- Search Form -->
+                                <div class="search-form active">
+                                    <a class="icon" href="#"><i class="fa fa-search"></i></a>
+                                    <form class="form" action="#">
+                                        <input placeholder="Search & Enter" type="search">
+                                    </form>
+                                </div>
+                                <!--/ End Search Form -->
+                                <!-- Social -->
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                                <!--/ End Social -->
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <!--/ End Topbar -->
+            <!-- Middle Bar -->
+            <div class="middle-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-12">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                            </div>
+                            <div class="link"><a href="index.html"><span>R</span>adix</a></div>
+                            <!--/ End Logo -->
+                            <button class="mobile-arrow"><i class="fa fa-bars"></i></button>
+                            <div class="mobile-menu"></div>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <!-- Main Menu -->
+                            <div class="mainmenu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li><a href="#">Solutions<i class="fa fa-caret-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">Business Size</a></li>
+                                                <li><a href="#">Start Ups</a></li>
+                                                <li><a href="#">SMB</a></li>
+                                                <li><a href="#">Enterprise</a></li>
 
-        @include('layouts.navbar')
+                                                <li><a href="#">Department</a></li>
+                                                <li><a href="#">Marketing</a></li>
+                                                <li><a href="#">Operations</a></li>
+                                                <li><a href="#">Engineering</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/login">Login</a></li>   
+                                        <li><a href="/register">Sign Up</a></li> 
+                                    </ul>
+                                </nav>
+                                <!-- Button -->
+                                <div class="button">
+                                    <a href="{{route('login-form')}}" class="btn">Post a Job</a>
+                                </div>
+                                <!--/ End Button -->
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Middle Bar -->
+        </header>
+        <!--/ End Header -->
+            @yield('content')
 
-        @yield('content')
+            
+        <!-- Footer -->
+        <footer id="footer" class="footer wow fadeIn">
+            <!-- Top Arrow -->
+            <div class="top-arrow">
+                <a href="#header" class="btn"><i class="fa fa-angle-up"></i></a>
+            </div>
+            <!--/ End Top Arrow -->
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- About Widget -->
+                            <div class="single-widget about">
+                                <h2>Office Location</h2>
+                                <p>Maecenas sapien erat, porta non porttitor non, dignissim et enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa fa-map-marker"></i>Address: House 20, Sector-7, Road-5, California, US</li>
+                                    <li><i class="fa fa-headphones"></i>Phone: +(123) 45678 910</li>
+                                    <li><i class="fa fa-headphones"></i>Email:<a href="mailto:info@youremail.com">Info@yourwebsite.com</a></li>
+                                </ul>   
+                            </div>
+                            <!--/ End About Widget -->
+                        </div>  
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Links Widget -->
+                            <div class="single-widget links">
+                                <h2>Quick Links</h2>
+                                <ul class="list">
+                                    <li><a href="about-us.html"><i class="fa fa-caret-right"></i>About Our Company</a></li>
+                                    <li><a href="services.html"><i class="fa fa-caret-right"></i>Our Latest services</a></li>
+                                    <li><a href="projects-masonry.html"><i class="fa fa-caret-right"></i>Our Recent Project</a></li>
+                                    <li><a href="blogs-right-sidebar.html"><i class="fa fa-caret-right"></i>Latest Blog</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-caret-right"></i>Help Desk</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-caret-right"></i>Contact With Us</a></li>
+                                </ul>
+                            </div>
+                            <!--/ End Links Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Twitter Widget -->
+                            <div class="single-widget twitter">
+                                <h2>Recent Tweets</h2>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Mauris sagittis nibh et nibh commodo vehicula. Praesent blandit nulla nec tristique egestas. Integer in volutpat turpis</p>
+                                </div>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Maecenas vulputate, dui eget varius sagittis, justo nunc efficitur sem, id vestibulum</p>
+                                </div>
+                                <div class="single-tweet">
+                                    <i class="fa fa-twitter"></i>
+                                    <p><a href="#">@Radix</a>Praesent facilisis tortor nec diam suscipit condimentum</p>
+                                </div>
+                            </div>
+                            <!--/ End Twitter Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Newsletter Widget -->
+                            <div class="single-widget newsletter">
+                                <h2>Newsletter</h2>
+                                <p>consectetur adipiscing elit. Vestibulum vel sapien et lacus tempus varius. In finibus lorem vel.</p>
+                                <form>
+                                    <input placeholder="Your Name" type="text">
+                                    <input placeholder="your email" type="email">
+                                    <button type="submit" class="button primary">Subscribe Now!</button>
+                                </form> 
+                            </div>
+                            <!--/ End Newsletter Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Footer Top -->
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="bottom-top">
+                                <!-- Social -->
+                                <ul class="social">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                                <!--/ End Social -->
+                                <!-- Copyright -->
+                                <div class="copyright">
+                                    <p>&copy; 2020 All Right Reserved. Design & Development By <a target="_blank" href="http://themelamp.com">ThemeLamp.com</a>, Theme Provided By  <a target="_blank" href="https://codeglim.com">CodeGlim.com</a></p>
+                                </div>
+                                <!--/ End Copyright -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Footer Bottom -->
+        </footer>
+        <!--/ End footer -->
 
-
-        @include('layouts.footer')
-        <!-- jquery latest version
-        ========================================================= -->   
-        <script src="{{ asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
-        
-        <!-- Bootstrap framework js
-        ========================================================= -->           
-        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-        
-        <!-- Owl Carousel js
-        ========================================================= -->       
-        <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
-        
-        <!-- nivo slider js
-        ========================================================= -->       
-        <script src="{{ asset('lib/nivo-slider/js/jquery.nivo.slider.js')}}" type="text/javascript"></script>
-        <script src="{{ asset('lib/nivo-slider/home.js')}}" type="text/javascript"></script>
-        
-        <!-- Js plugins included in this file
-        ========================================================= -->   
-        <script src="{{ asset('js/plugins.js')}}"></script>
-        
-        <!-- Video Player JS
-        ========================================================= -->           
-        <script src="{{ asset('js/jquery.mb.YTPlayer.js')}}"></script>
-        
-        <!-- AJax Mail JS
-        ========================================================= -->           
-        <script src="{{ asset('js/ajax-mail.js')}}"></script>
-        
-        <!-- Mail Chimp JS
-        ========================================================= -->           
-        <script src="{{ asset('js/jquery.ajaxchimp.min.js')}}"></script>
-        
-        <!-- StyleSwitch JS
-        ========================================================= -->       
-        <script src="{{ asset('js/styleswitch.js')}}"></script>
-        
-        <!-- Waypoint Js
-        ========================================================= -->   
-        <script src="{{ asset('js/waypoints.min.js')}}"></script>
-        
-        <!-- Main js file contents all jQuery plugins activation
-        ========================================================= -->       
-        <script src="{{ asset('js/main.js')}}"></script>
-        
+        <!-- Jquery -->
+        <script src="{{asset('js/jquery.min.js')}}"></script>
+        <script src="{{asset('js/jquery-migrate.min.js')}}"></script>
+        <!-- Popper JS -->
+        <script src="{{asset('js/popper.min.js')}}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{{asset('js/bootstrap.min.js')}}"></script> 
+        <!-- Colors JS -->
+        <script src="{{asset('js/colors.js')}}"></script>
+        <!-- Modernizer JS -->
+        <script src="{{asset('js/modernizr.min.js')}}"></script>
+        <!-- Nice select JS -->
+        <script src="{{asset('js/niceselect.js')}}"></script>
+        <!-- Tilt Jquery JS -->
+        <script src="{{asset('js/tilt.jquery.min.js')}}"></script>
+        <!-- Fancybox  -->
+        <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
+        <!-- Jquery Nav -->
+        <script src="{{asset('js/jquery.nav.js')}}"></script>
+        <!-- Owl Carousel JS -->
+        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+        <!-- Slick Slider JS -->
+        <script src="{{asset('js/slickslider.min.js')}}"></script>
+        <!-- Cube Portfolio JS -->
+        <script src="{{asset('js/cubeportfolio.min.js')}}"></script>
+        <!-- Slicknav JS -->
+        <script src="{{asset('js/jquery.slicknav.min.js')}}"></script>
+        <!-- Jquery Steller JS -->
+        <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
+        <!-- Magnific Popup JS -->
+        <script src="{{asset('js/magnific-popup.min.js')}}"></script>
+        <!-- Wow JS -->
+        <script src="{{asset('js/wow.min.js')}}"></script>
+        <!-- CounterUp JS -->
+        <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
+        <!-- Waypoint JS -->
+        <script src="{{asset('js/waypoints.min.js')}}"></script>
+        <!-- Jquery Easing JS -->
+        <script src="{{asset('js/easing.min.js')}}"></script>
+        <!-- Google Map JS -->
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>  -->
+        <script src="{{asset('js/gmap.min.js')}}"></script>
+        <!-- Main JS -->
+        <script src="{{asset('js/main.js')}}"></script>
     </body>
 </html>

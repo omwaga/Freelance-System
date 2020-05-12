@@ -21,7 +21,7 @@ class CreateJobsTable extends Migration
             $table->text('description');
             $table->string('quotes_until');
             $table->unsignedBiginteger('country_id');
-            $table->unsignedBiginteger('city_id');
+            $table->unsignedBiginteger('state_id');
             $table->string('cost_range')->nullable();
             $table->string('duration')->nullable();
             $table->string('hours')->nullable();
@@ -45,9 +45,9 @@ class CreateJobsTable extends Migration
                 ->on('countries')
                 ->onDelete('cascade');
 
-            $table->foreign('city_id')
+            $table->foreign('state_id')
                 ->references('id')
-                ->on('cities')
+                ->on('states')
                 ->onDelete('cascade');
 
         });

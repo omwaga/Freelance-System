@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Category;
 use App\Job;
-use App\City;
+use App\State;
 use App\Country;
 
 class ProjectsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth', 'verified']);
+        $this->middleware(['auth:employer', 'verified']);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProjectsController extends Controller
     public function create()
     { 
         $categories = Category::all(); 
-        $cities = City::all();
+        $cities = State::all();
         $countries = Country::all();
 
         return view('employer.newproject', compact('categories', 'cities', 'countries'));

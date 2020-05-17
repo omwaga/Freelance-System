@@ -68,116 +68,8 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
-                                <div class="card-header">
-                                    <div class="card-head-row">
-                                        <div class="card-title">User Statistics</div>
-                                        <div class="card-tools">
-                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
-                                                <span class="btn-label">
-                                                    <i class="fa fa-pencil"></i>
-                                                </span>
-                                                Export
-                                            </a>
-                                            <a href="#" class="btn btn-info btn-border btn-round btn-sm">
-                                                <span class="btn-label">
-                                                    <i class="fa fa-print"></i>
-                                                </span>
-                                                Print
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card-body">
-                                    <div class="chart-container" style="min-height: 375px">
-                                        <canvas id="statisticsChart"></canvas>
-                                    </div>
-                                    <div id="myChartLegend"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <div class="card-title">Daily Sales</div>
-                                    <div class="card-category">March 25 - April 02</div>
-                                </div>
-                                <div class="card-body pb-0">
-                                    <div class="mb-4 mt-2">
-                                        <h1>$4,578.58</h1>
-                                    </div>
-                                    <div class="pull-in">
-                                        <canvas id="dailySalesChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body pb-0">
-                                    <div class="h1 fw-bold float-right text-warning">+7%</div>
-                                    <h2 class="mb-2">213</h2>
-                                    <p class="text-muted">Transactions</p>
-                                    <div class="pull-in sparkline-fix">
-                                        <div id="lineChart"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-title">Top Products</div>
-                                </div>
-                                <div class="card-body pb-0">
-                                    <div class="d-flex">
-                                        <div class="avatar">
-                                            <img src="../assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
-                                        </div>
-                                        <div class="flex-1 pt-1 ml-2">
-                                            <h6 class="fw-bold mb-1">CSS</h6>
-                                            <small class="text-muted">Cascading Style Sheets</small>
-                                        </div>
-                                        <div class="d-flex ml-auto align-items-center">
-                                            <h3 class="text-info fw-bold">+$17</h3>
-                                        </div>
-                                    </div>
-                                    <div class="separator-dashed"></div>
-                                    <div class="d-flex">
-                                        <div class="avatar">
-                                            <img src="../assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
-                                        </div>
-                                        <div class="flex-1 pt-1 ml-2">
-                                            <h6 class="fw-bold mb-1">J.CO Donuts</h6>
-                                            <small class="text-muted">The Best Donuts</small>
-                                        </div>
-                                        <div class="d-flex ml-auto align-items-center">
-                                            <h3 class="text-info fw-bold">+$300</h3>
-                                        </div>
-                                    </div>
-                                    <div class="separator-dashed"></div>
-                                    <div class="d-flex">
-                                        <div class="avatar">
-                                            <img src="../assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
-                                        </div>
-                                        <div class="flex-1 pt-1 ml-2">
-                                            <h6 class="fw-bold mb-1">Ready Pro</h6>
-                                            <small class="text-muted">Bootstrap 4 Admin Dashboard</small>
-                                        </div>
-                                        <div class="d-flex ml-auto align-items-center">
-                                            <h3 class="text-info fw-bold">+$350</h3>
-                                        </div>
-                                    </div>
-                                    <div class="separator-dashed"></div>
-                                    <div class="pull-in">
-                                        <canvas id="topProductsChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title fw-mediumbold">Suggested People</div>
+                                    <div class="card-title fw-mediumbold">Suggested Freelancers</div>
                                     <div class="card-list">
                                         <div class="item-list">
                                             <div class="avatar">
@@ -256,17 +148,53 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="card card-primary bg-primary-gradient">
-                                <div class="card-body">
-                                    <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Active user right now</h4>
-                                    <h1 class="mb-4 fw-bold">17</h1>
-                                    <h4 class="mt-3 b-b1 pb-2 mb-5 fw-bold">Page view per minutes</h4>
-                                    <div id="activeUsersChart"></div>
-                                    <h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="d-flex justify-content-between pb-1 pt-1"><small>/product/readypro/index.html</small> <span>7</span></li>
-                                        <li class="d-flex justify-content-between pb-1 pt-1"><small>/product/atlantis/demo.html</small> <span>10</span></li>
-                                    </ul>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Top Projects</div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="d-flex">
+                                        <div class="avatar">
+                                            <img src="../assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
+                                        </div>
+                                        <div class="flex-1 pt-1 ml-2">
+                                            <h6 class="fw-bold mb-1">CSS</h6>
+                                            <small class="text-muted">Cascading Style Sheets</small>
+                                        </div>
+                                        <div class="d-flex ml-auto align-items-center">
+                                            <h3 class="text-info fw-bold">+$17</h3>
+                                        </div>
+                                    </div>
+                                    <div class="separator-dashed"></div>
+                                    <div class="d-flex">
+                                        <div class="avatar">
+                                            <img src="../assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
+                                        </div>
+                                        <div class="flex-1 pt-1 ml-2">
+                                            <h6 class="fw-bold mb-1">J.CO Donuts</h6>
+                                            <small class="text-muted">The Best Donuts</small>
+                                        </div>
+                                        <div class="d-flex ml-auto align-items-center">
+                                            <h3 class="text-info fw-bold">+$300</h3>
+                                        </div>
+                                    </div>
+                                    <div class="separator-dashed"></div>
+                                    <div class="d-flex">
+                                        <div class="avatar">
+                                            <img src="../assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+                                        </div>
+                                        <div class="flex-1 pt-1 ml-2">
+                                            <h6 class="fw-bold mb-1">Ready Pro</h6>
+                                            <small class="text-muted">Bootstrap 4 Admin Dashboard</small>
+                                        </div>
+                                        <div class="d-flex ml-auto align-items-center">
+                                            <h3 class="text-info fw-bold">+$350</h3>
+                                        </div>
+                                    </div>
+                                    <div class="separator-dashed"></div>
+                                    <div class="pull-in">
+                                        <canvas id="topProductsChart"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +239,7 @@
                             <div class="card full-height">
                                 <div class="card-header">
                                     <div class="card-head-row">
-                                        <div class="card-title">Support Tickets</div>
+                                        <div class="card-title">My Projects</div>
                                         <div class="card-tools">
                                             <ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
                                                 <li class="nav-item">

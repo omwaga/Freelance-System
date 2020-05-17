@@ -24,4 +24,10 @@ class PagesController extends Controller
     {
     	return view('auth.employer-login');
     }
+
+    //display all freelancers
+    public function freelancers()
+    {
+        return view('freelancers');
+    }
 }

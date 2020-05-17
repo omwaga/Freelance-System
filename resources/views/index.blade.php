@@ -14,8 +14,7 @@
                                     <h1>Radix <span>Business</span> In-demand talent on demand.TM<span>!</span></h1>
                                     <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent.</p>
                                     <div class="button">
-                                        <a href="portfolio-3-column.html" class="btn">Our Portfolio</a>
-                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                        <a href="{{route('allfreelancers')}}" class="btn">Browse Freelancers</a>
                                     </div>
                                 </div>
                                 <!--/ End Slider Text -->
@@ -59,7 +58,7 @@
                                     <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent. </p>
                                     <div class="button">
                                         <a href="services.html" class="btn">Our Services</a>
-                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                        <a href="#" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
                                     </div>
                                 </div>
                                 <!--/ End Slider Text -->
@@ -79,7 +78,7 @@
                                     <p>Upwork expertly connects professionals and agencies to businesses seeking specialized talent.</p>
                                     <div class="button">
                                         <a href="about-us.html" class="btn">About Company</a>
-                                        <a href="https://www.youtube.com/watch?v=FZQPhrdKjow" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
+                                        <a href="#" class="btn video video-popup mfp-fade"><i class="fa fa-play"></i>Play Now</a>
                                     </div>
                                 </div>
                                 <!--/ End Slider Text -->

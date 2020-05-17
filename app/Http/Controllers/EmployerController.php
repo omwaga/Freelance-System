@@ -15,4 +15,10 @@ class EmployerController extends Controller
     {
         return view('employer.index');
     }
+
+    //show the employer profile
+    public function profile()
+    {
+    	return view('employer.my-profile');
+    }
 }

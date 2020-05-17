@@ -15,7 +15,7 @@ class WorkroomController extends Controller
      */
     public function index()
     {
-        $jobs = Job::where('user_id', auth()->user()->id)->get();
+        $jobs = Job::all();
 
         return view('employer.workrooms', compact('jobs'));
     }

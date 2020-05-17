@@ -10,19 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'PagesController@index')->name('homepage');
-Route::get('/user', 'UserController@index');
-
-Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
-
 Route::prefix('admin')->group(function()
 {
 	Route::get('', 'AdminController@index')->name('admin');
     Route::resource('abouts', 'AboutsController');
     Route::resource('categories', 'CategoriesController');
-    Route::resource('jobs', 'ProjectsController');
-    Route::resource('freelancers', 'FreelancersController');
     Route::get('/findfreelancer', 'FreelancersController@findfreelancers')->name('findfreelancers');
     Route::get('/joblistings', 'FreelancersController@joblistings')->name('joblistings');
     Route::resource('countries', 'CountriesController');
@@ -36,6 +28,18 @@ Route::prefix('employer')->group(function()
     Route::get('/login', 'PagesController@employerlogin')->name('login-form');
     Route::post('/login','Auth\EmployerLoginController@login')->name('employer-login');
     Route::get('/dashboard', 'EmployerController@employer')->name('employer-dashboard');
+    Route::get('/profile', 'EmployerController@profile')->name('employer-profile');
+    Route::resource('jobs', 'ProjectsController');
+    Route::resource('freelancers', 'FreelancersController');
 });
+
+Route::prefix('user')->group(function()
+{
+    Route::get('/dashboard', 'UserController@index')->name('user-dashboard');
+});
+Route::get('/', 'PagesController@index')->name('homepage');
+Route::get('/freelancers', 'PagesController@freelancers')->name('allfreelancers');
+Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
+
 
 Auth::routes(['verify' => true]);

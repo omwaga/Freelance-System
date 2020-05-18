@@ -55,7 +55,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Sub Categories</label>
-                                        <select name="level_required" class="form-control">
+                                        <select name="sub_category_id" class="form-control">
                                             <option>Not Specified</option>
                                             <option>Beginner</option>
                                             <option>Intermediate</option>
@@ -72,13 +72,13 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Upload samples and other useful materials</label>
-                                        <textarea id="desc" name="description" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
+                                        <textarea id="desc" name="uploads" class="form-control" rows="3" placeholder="Project Description" required="">{{old('description')}}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Work Type:</label>                                        
-                                        <select name="category_id" class="form-control">
+                                        <select name="work_type" class="form-control">
                                             <option>All Categories</option>
                                             @foreach($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>
@@ -90,7 +90,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Budget:</label>                                        
-                                        <select name="category_id" class="form-control">
+                                        <select name="budget" class="form-control">
                                             <option>All Categories</option>
                                             @foreach($categories as $category)
                                             <option value="{{$category->id}}">{{$category->name}}</option>
@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Where does the freelancer need to work from?</label>
-                                        <select name="city_id" class="form-control">
+                                        <select name="work_from" class="form-control">
                                             <option>Select City/Region</option>
                                             @foreach($cities as $city)
                                             <option value="{{$city->id}}">{{$city->city}}</option>
@@ -119,7 +119,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>Country:</label>
-                                                <select name="city_id" class="form-control">
+                                                <select name="country_id" class="form-control">
                                                     <option>Select City/Region</option>
                                                     @foreach($cities as $city)
                                                     <option value="{{$city->id}}">{{$city->city}}</option>
@@ -130,7 +130,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>City:</label>
-                                                <select name="country_id" class="form-control">
+                                                <select name="state_id" class="form-control">
                                                     <option>Select Country</option>
                                                     @foreach($countries as $country)
                                                     <option value="{{$country->id}}">{{$country->country}}</option>
@@ -148,7 +148,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>Estimated Project Duration</label>
-                                                <select name="country_id" class="form-control">
+                                                <select name="project_duration" class="form-control">
                                                     <option>Select Country</option>
                                                     <option value="">! day or less</option>
                                                 </select>

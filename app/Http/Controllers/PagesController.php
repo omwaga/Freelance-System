@@ -30,4 +30,10 @@ class PagesController extends Controller
     {
         return view('freelancers');
     }
+
+    //select the registration type  by the user
+    public function registrationtype()
+    {
+        return view('registration-type');
+    }
 }

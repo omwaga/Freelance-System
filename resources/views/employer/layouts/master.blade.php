@@ -343,7 +343,7 @@
                     </li>
                     <li class="nav-item">
                         <a data-toggle="collapse" href="#projects" class="collapsed" aria-expanded="false">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-project-diagram"></i>
                             <p>Projects</p>
                             <span class="caret"></span>
                         </a>
@@ -352,13 +352,13 @@
                             <ul class="nav nav-collapse">
                                 <li>
                                     <a  href="/employer/jobs/create">
-                                        <i class="fas fa-layer-group"></i>
+                                        <i class="fas fa-plus-circle"></i>
                                         <p>Post a Project</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('joblistings')}}">
-                                        <i class="fas fa-layer-group"></i>
+                                        <i class="fas fa-list-alt"></i>
                                         <p>Job Listings</p>
                                     </a>
                                 </li>
@@ -366,7 +366,7 @@
                         </div>
 
                         <a data-toggle="collapse" href="#freelancers" class="collapsed" aria-expanded="false">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-users"></i>
                             <p>Freelancers</p>
                             <span class="caret"></span>
                         </a>
@@ -374,19 +374,19 @@
                             <ul class="nav nav-collapse">
                                 <li>
                                     <a href="/employer/freelancers">
-                                        <i class="fas fa-layer-group"></i>
+                                        <i class="fas fa-recycle"></i>
                                         <p>ReHire</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/employer/freelancers">
-                                        <i class="fas fa-layer-group"></i>
+                                        <i class="fas fa-heartbeat"></i>
                                         <p>Favorite Freelancers</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{route('findfreelancers')}}">
-                                        <i class="fas fa-layer-group"></i>
+                                        <i class="fas fa-search-plus"></i>
                                         <p>Find a Freelancer</p>
                                     </a>
                                 </li>
@@ -401,11 +401,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{route('workrooms')}}">
-                            <i class="fas fa-pen-square"></i>
+                            <i class="fas fa-building"></i>
                             <p>Work Rooms</p>
                         </a>
                         <a data-toggle="collapse" href="#Payments" class="collapsed" aria-expanded="false">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-money-bill-wave"></i>
                             <p>Payments</p>
                             <span class="caret"></span>
                         </a>
@@ -413,19 +413,19 @@
                             <ul class="nav nav-collapse">
                                 <li>
                         <a href="{{route('workrooms')}}">
-                            <i class="fas fa-pen-square"></i>
+                            <i class="fas fa-wallet"></i>
                             <p>My Wallet</p>
                         </a>
                                 </li>
                                 <li>
                         <a href="{{route('workrooms')}}">
-                            <i class="fas fa-pen-square"></i>
+                            <i class="fab fa-cc-amazon-pay"></i>
                             <p>Payments</p>
                         </a>
                                 </li>
                                 <li>
                         <a href="{{route('workrooms')}}">
-                            <i class="fas fa-pen-square"></i>
+                            <i class="fas fa-list-ol"></i>
                             <p>Transaction Reports</p>
                         </a>
                                 </li>

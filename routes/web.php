@@ -39,7 +39,8 @@ Route::prefix('user')->group(function()
 });
 Route::get('/', 'PagesController@index')->name('homepage');
 Route::get('/freelancers', 'PagesController@freelancers')->name('allfreelancers');
-Route::get('/registeremployer', 'RegisterEmployersController@registerform')->name('registeremployer');
+Route::get('/select-registration-type', 'PagesController@registrationtype')->name('select-registration-type');
+Route::get('/register-as-employer', 'RegisterEmployersController@registerform')->name('register-employer');
 
 
 Auth::routes(['verify' => true]);
